@@ -9,11 +9,7 @@
 */
 
 
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Udger.Parser;
-
 
 namespace ConsoleTest
 {
@@ -34,7 +30,7 @@ namespace ConsoleTest
             // Set data dir (in this directory is stored data file: udgerdb_v3.dat)
             // Test data file is available on:  https://github.com/udger/test-data/tree/master/data_v3
             // Full data file can be downloaded manually from http://data.udger.com/, but we recommend use udger-updater
-            parser.SetDataDir(@"C:\udger");
+            parser.SetDataDir(@"C:\Users\nfreier\Downloads\reference");
             // or set data dir and DB filename
             //parser.SetDataDir(@"C:\udger", "udgerdb_v3-noip.dat ");
 

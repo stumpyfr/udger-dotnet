@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-beta",
+
+  "dependencies": {
+    "Dapper": "1.50.2",
+    "Microsoft.Data.Sqlite": "1.1.0",
+    "NETStandard.Library": "1.6.1"
+  },
+
+  "frameworks": {
+    "net452": {
+    },
+    "netstandard1.6": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1"
+      }
+    }
+  },
+
+  "scripts": {
+    "postcompile": [
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
+  }
+}
