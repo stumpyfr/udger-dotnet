@@ -114,7 +114,7 @@ namespace Udger.Parser
                 throw new Exception("Data dir not found");
 
             dt.data_dir = dataDir;
-            dt.DataSourcePath = dataDir + @"\udgerdb_v3.dat";
+            dt.DataSourcePath = Path.Combine(dataDir, "udgerdb_v3.dat");
 
             if (!File.Exists(dt.DataSourcePath))
                 throw new Exception("Data file udgerdb_v3.dat not found");
@@ -130,7 +130,7 @@ namespace Udger.Parser
                 throw new Exception("Data dir not found");
 
             dt.data_dir = dataDir;
-            dt.DataSourcePath = dataDir + @"\" + fileName;
+            dt.DataSourcePath = Path.Combine(dataDir, fileName);
 
             if (!File.Exists(dt.DataSourcePath))
                 throw new Exception("Data file " + fileName + " not found");
@@ -148,6 +148,8 @@ namespace Udger.Parser
             UserAgent uaCache;
 
             dt.connect(this);
+
+            this.dt.Db.Open();
             UdgerParser.initStaticStructures(dt);
             if (dt.Connected)
             {
