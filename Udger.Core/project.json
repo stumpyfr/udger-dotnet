@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta",
+  "version": "3.0.1-beta",
 
   "dependencies": {
     "Dapper": "1.50.2",
